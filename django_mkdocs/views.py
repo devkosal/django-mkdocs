@@ -8,12 +8,12 @@ from django.contrib.auth.decorators import login_required
 DOCUMENTATION_ROOT = 'index.html'
 
 
-@login_required
+# @login_required
 def documentation(request, path):
     if path == '':
         path = DOCUMENTATION_ROOT
-    if not app_settings.DOCUMENTATION_ACCESS_FUNCTION(request.user):
-        return HttpResponseRedirect(app_settings.LOGIN_REDIRECT_URL)
+    # if not app_settings.DOCUMENTATION_ACCESS_FUNCTION(request.user):
+    #     return HttpResponseRedirect(app_settings.LOGIN_REDIRECT_URL)
     if not app_settings.DOCUMENTATION_XSENDFILE:
         return serve(
             request,

@@ -121,10 +121,10 @@ DOCUMENTATION_HTML_ROOT points to the root of our statically generated site. Thi
 DOCUMENTATION_HTML_ROOT = DOCUMENTATION_ROOT + '/site'
 ```
 
-DOCUMENTATION_ACCESS_FUNCTION is used in the views that attempt to access the documentation. Django-mkdocs calls DOCUMENTATION_ACCESS_FUNCTION with request.user as an argument. This flag determines who has access to view the docs.
+<!-- DOCUMENTATION_ACCESS_FUNCTION is used in the views that attempt to access the documentation. Django-mkdocs calls DOCUMENTATION_ACCESS_FUNCTION with request.user as an argument. This flag determines who has access to view the docs.
 ```
 DOCUMENTATION_ACCESS_FUNCTION = lambda user: user.is_staff
-```
+``` -->
 
 Django-mkdocs assumes an Nginx server is used by default to serve the documentation. DOCUMENTATION_XSENDFILE is set to true by default. If you are not using Nginx, expect a very small number of users, and understand the consequences of using django.views.static.serve, set the following flag:
 ```
