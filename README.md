@@ -9,7 +9,7 @@ To be clear, django-mkdocs was not intended for large-scale access. It was origi
 
 Django-mkdocs can be installed directly from pip:
 ```
-$ pip install django-mkdocs
+$ pip install git+https://github.com/devkosal/django-mkdocs
 ```
 
 ### Plugging django-mkdocs into your Django project
